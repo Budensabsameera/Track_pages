@@ -1,0 +1,181 @@
+/* Aim, Theme & Topics Section */
+.aim-theme-topics {
+  max-width: 100%;
+  margin: 40px 0;
+  padding: 0 90px;
+  color: #0a4360;
+}
+
+.aim-theme-topics .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #0a4360;
+}
+
+.aim-theme-topics p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.topics-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.topics-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f9f9f9;
+  padding: 12px 18px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.topics-list li i {
+  font-size: 1.2rem;
+  color: #2bb884;
+}
+
+.topics-list li:hover {
+  transform: translateX(5px);
+  background: linear-gradient(135deg, #0a4360 0%, #2bb884 100%);
+  color: #fff;
+}
+
+.topics-list li:hover i,
+.topics-list li:hover span {
+  color: #fff;
+}
+
+/* Topics Explanation Section */
+.topics-explanation {
+  max-width: 100%;
+  padding: 40px 90px;
+  color: #0a4360;
+}
+
+.topics-explanation .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.topic-item {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 18px 22px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  transition: transform 0.4s ease, background 0.4s ease, color 0.4s ease;
+}
+
+.topic-item h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2bb884;
+  margin-bottom: 10px;
+}
+
+.topic-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.topic-item:hover {
+  transform: translateX(5px);
+  background: linear-gradient(135deg, #0a4360 0%, #2bb884 100%);
+  color: #fff;
+}
+
+.topic-item:hover h3,
+.topic-item:hover p {
+  color: #fff;
+}
+
+.topic-item i {
+  font-size: 1.4rem;
+}
+
+/* Why Join & Things to Remember Sections */
+.why-join-section,
+.things-remember-section {
+  padding: 35px 50px;
+  background: none;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0a4360;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.why-join-list,
+.things-remember-list {
+  list-style: none;
+  padding: 0;
+}
+
+.why-join-list li,
+.things-remember-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.why-join-list li i,
+.things-remember-list li i {
+  font-size: 1.4rem;
+  color: #2bb884;
+  min-width: 25px;
+}
+
+.why-join-list li strong,
+.things-remember-list li strong {
+  color: #0a4360;
+}
+
+.why-join-list li:hover,
+.things-remember-list li:hover {
+  transform: translateX(5px);
+  background: #f0f0f0;
+}
+
+.why-join-list li:hover strong,
+.things-remember-list li:hover strong {
+  color: #0a4360;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .aim-theme-topics,
+  .topics-explanation,
+  .why-join-section,
+  .things-remember-section {
+    padding: 20px;
+  }
+
+  .why-join-list li,
+  .things-remember-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

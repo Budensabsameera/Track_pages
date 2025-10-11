@@ -1,0 +1,307 @@
+/* ----------------about wePOWER Section ---------------- */
+
+.about-wepower {
+  position: relative;
+  padding: 25px 10px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.about-wepower .bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0.15)
+    ),
+    url("../images/BluePattern.png");
+  background-size: 450px 450px;
+  background-repeat: repeat;
+  background-position: center;
+  z-index: 0;
+  opacity: 0.15;
+  transition: opacity 0.3s ease, transform 0.5s ease;
+}
+
+.about-wepower:hover .bg-image {
+  transform: scale(1.02);
+}
+
+.about-wepower .container {
+  position: relative;
+  z-index: 1; /* ensures content is above bg-image */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.about-wepower .content {
+  flex: 1 1 60%;
+  min-width: 300px;
+  order: 0;
+  text-align: left;
+  z-index: 2; /* ensures it's above bg-image */
+}
+
+.about-wepower .title {
+  font-size: 2.5rem;
+  color: #0a4360;
+  margin-bottom: 20px;
+}
+
+.about-wepower .subtitle {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #0a4360cc;
+}
+
+.about-wepower .presentation-link {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0a4360;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.about-wepower .presentation-link:hover {
+  color: #2bb884;
+  transform: scale(1.05);
+}
+
+.about-wepower .image {
+  flex: 1 1 37%;
+  min-width: 250px;
+  order: 1;
+  position: relative;
+  overflow: visible;
+}
+.about-wepower .image img {
+  width: 120%;
+  height: 275px; /* base height for large screens */
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  display: block;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .about-wepower .image img {
+    width: 100%; /* fit smaller screens */
+    height: 250px; /* slightly smaller height */
+  }
+}
+
+@media (max-width: 768px) {
+  .about-wepower .image img {
+    width: 100%;
+    height: 200px; /* smaller height for mobile */
+  }
+}
+
+/* ----------------participants wePOWER Section ---------------- */
+
+.participants-section {
+  padding: 20px;
+  background: linear-gradient(135deg, #f0f9f8, #e6f7f3);
+}
+
+/* Text Paragraph */
+.participants-section .text-content {
+  padding: 0px 90px;
+  max-width: 100%;
+  margin: 0;
+  color: #0a4360;
+  text-align: left;
+  font-weight: bolder;
+}
+
+/* Buttons */
+.participants-section .button-row {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.participants-section .jkit-button {
+  display: inline-block;
+  padding: 12px 30px;
+  margin: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 12px;
+  border: 2px solid #fff;
+  color: #fff;
+  background: linear-gradient(135deg, #2bb884, #0a4360);
+  transition: all 0.4s ease;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.participants-section .jkit-button:hover {
+  background: linear-gradient(135deg, #0a4360, #2bb884);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Section Heading */
+.participants-section .section-heading h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #0a4360;
+  margin-bottom: 20px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.participants-section .section-heading h2:hover {
+  color: #2bb884;
+}
+
+/* --- SDG Images Row --- */
+.sdg-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.sdg-row img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+  border: 3px solid transparent;
+}
+
+/* Hover animation */
+.sdg-row img:hover {
+  transform: scale(1.1);
+  border-color: #2bb884;
+  box-shadow: 0 8px 20px rgba(43, 184, 132, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sdg-row img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .participants-section .text-content {
+    padding: 0 20px;
+  }
+
+  .participants-section .section-heading h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* --- MILESTONES - WePOWER Section --- */
+.wepower-milestones {
+  max-width: 100%;
+  margin: 40px 0;
+  padding: 0 90px;
+  color: #0a4360;
+}
+
+.wepower-milestones .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #0a4360;
+}
+
+.milestone-subtitle {
+  text-align: center;
+  font-weight: 600;
+  color: #2bb884;
+  margin-bottom: 10px;
+}
+
+.milestone-description {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.section-subtitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0a4360;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* List Boxes same as previous Topics Section */
+.topics-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.topics-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f9f9f9;
+  padding: 12px 18px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.topics-list li i {
+  font-size: 1.2rem;
+  color: #2bb884;
+}
+
+.topics-list li:hover {
+  transform: translateX(5px);
+  background: linear-gradient(135deg, #0a4360 0%, #2bb884 100%);
+  color: #fff;
+}
+
+.topics-list li:hover i,
+.topics-list li:hover span {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .wepower-milestones {
+    padding: 0 25px;
+  }
+
+  .wepower-milestones .section-title {
+    font-size: 1.6rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .topics-list li {
+    font-size: 0.95rem;
+  }
+}

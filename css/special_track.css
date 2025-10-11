@@ -1,0 +1,62 @@
+/* Points to Remember Section Styling */
+.points-to-remember-section {
+  padding: 35px 50px;
+  background: none;
+  margin-bottom: 40px;
+}
+
+.points-to-remember-section .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0a4360;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.points-to-remember-list {
+  list-style: none;
+  padding: 0;
+}
+
+.points-to-remember-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.points-to-remember-list li i {
+  font-size: 1.4rem;
+  color: #2bb884;
+  min-width: 25px;
+}
+
+.points-to-remember-list li strong {
+  color: #0a4360;
+}
+
+.points-to-remember-list li:hover {
+  transform: translateX(5px);
+  background: #f0f0f0;
+}
+
+.points-to-remember-list li:hover strong {
+  color: #0a4360;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .points-to-remember-section {
+    padding: 20px;
+  }
+
+  .points-to-remember-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
