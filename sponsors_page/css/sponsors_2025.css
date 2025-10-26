@@ -1,53 +1,76 @@
 /* ---------------- .full-banner Section ---------------- */
-
-
 .full-banner {
-  width: 100%; /* full width */
-  padding: 100px 20px; /* tall banner */
+  width: 100%;
+  padding: 100px 20px 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #0a415c;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  color: #0a415c;
   position: relative;
+  box-sizing: border-box;
 }
 
 .full-banner h2 {
   font-size: 3rem;
   font-weight: 800;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.full-banner p {
-  font-size: 1.5rem;
-  font-weight: 500;
-  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+.full-banner img {
+  width: 80%;
+  max-width: 1000px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
 }
 
-/* Responsive */
+.full-banner img:hover {
+  transform: scale(1.03);
+}
+
+/* ---------- Responsive Styles ---------- */
+
+/* Tablets (width ≤ 992px) */
 @media (max-width: 992px) {
-  .full-banner h2 {
-    font-size: 2.2rem;
+  .full-banner {
+    padding: 80px 20px;
   }
-  .full-banner p {
-    font-size: 1.2rem;
+  .full-banner h2 {
+    font-size: 2.4rem;
+  }
+  .full-banner img {
+    width: 85%;
   }
 }
 
+/* Large Mobiles (width ≤ 768px) */
+@media (max-width: 768px) {
+  .full-banner {
+    padding: 70px 15px;
+  }
+  .full-banner h2 {
+    font-size: 2rem;
+  }
+  .full-banner img {
+    width: 90%;
+  }
+}
+
+/* Small Mobiles (width ≤ 576px) */
 @media (max-width: 576px) {
   .full-banner {
-    padding: 60px 15px;
+    padding: 60px 10px;
   }
   .full-banner h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
-  .full-banner p {
-    font-size: 1rem;
+  .full-banner img {
+    width: 95%;
   }
 }
