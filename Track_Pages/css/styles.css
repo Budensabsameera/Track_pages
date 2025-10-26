@@ -241,6 +241,7 @@ main {
   display: none;
 }
 
+/***-------------------*** Animations ***-----------------***/
 /* Initial hidden state for all scroll animations */
 .scroll-animate {
   opacity: 0;
@@ -520,7 +521,7 @@ main {
   }
 }
 
-/* ---------------- innovation-hero ---------------- */
+/* ---------------- hero-section---------------- */
 
 .innovation-hero,
 .junior-hero,

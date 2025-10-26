@@ -1,0 +1,406 @@
+/* ---------------- Sponsorship Prospectus Section ---------------- */
+
+.prospectus-section {
+  position: relative;
+  background-image: url("https://www.theladders.com/wp-content/uploads/handshake_190617.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 140px 20px;
+  color: #ffffff;
+  overflow: hidden;
+
+  margin: 10px auto;
+}
+
+.prospectus-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.6) 40%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: 0;
+}
+
+/* Content on top */
+.prospectus-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Title */
+.prospectus-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.prospectus-title:hover {
+  transform: scale(1.05);
+  color: #2bb884;
+}
+
+/* Description text */
+.prospectus-text {
+  font-size: 1.1rem;
+  color: #e6f4f1;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  transition: transform 0.4s ease;
+}
+
+.prospectus-text:hover {
+  transform: translateY(-3px);
+}
+
+/* Button Styling */
+.prospectus-btn {
+  display: inline-block;
+  background: #2bb884;
+  color: #ffffff;
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(43, 184, 132, 0.4);
+}
+
+/* Hover effects with animation and color blend */
+.prospectus-btn:hover {
+  background: #0a415c;
+  transform: scale(1.08);
+  box-shadow: 0 10px 30px rgba(10, 65, 92, 0.6), 0 0 15px #2bb884;
+}
+
+/* Subtle glow animation when hovering */
+.prospectus-btn:hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  box-shadow: 0 0 20px rgba(43, 184, 132, 0.6);
+  opacity: 0;
+  animation: glowPulse 0.8s ease forwards;
+}
+
+/* Keyframe for glow effect */
+@keyframes glowPulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .prospectus-title {
+    font-size: 2rem;
+  }
+
+  .prospectus-text {
+    font-size: 1rem;
+  }
+
+  .prospectus-btn {
+    padding: 12px 28px;
+    font-size: 1rem;
+  }
+}
+
+/* ---------------- Sponsor Benefits Section (Light Theme) ---------------- */
+.sponsor-benefits {
+  background: linear-gradient(135deg, #f9fafb, #eaf4f4);
+  padding: 100px 20px;
+  color: #0a415c;
+  text-align: center;
+}
+
+.benefits-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #0a415c;
+  text-shadow: 0 3px 8px rgba(10, 65, 92, 0.1);
+}
+
+/* Grid layout with centered 2nd row */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+/* Force centering for second row of 3 cards */
+.benefits-grid > :nth-child(n + 5) {
+  justify-self: center;
+}
+
+/* Each card */
+.benefit-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 35px 25px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(10, 65, 92, 0.08);
+}
+
+/* Hover animation */
+.benefit-card:hover {
+  background: rgba(43, 184, 132, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(43, 184, 132, 0.25);
+}
+
+/* Icon style */
+.benefit-card i {
+  font-size: 2.5rem;
+  color: #2bb884;
+  margin-bottom: 20px;
+  transition: all 0.4s ease;
+}
+
+.benefit-card:hover i {
+  color: #0a415c;
+  transform: scale(1.2);
+}
+
+/* Headings */
+.benefit-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #0a415c;
+}
+
+/* Paragraph text */
+.benefit-card p {
+  font-size: 0.95rem;
+  color: #3a5b63;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .benefits-title {
+    font-size: 2rem;
+  }
+
+  .benefit-card {
+    padding: 25px 15px;
+  }
+
+  .benefit-card i {
+    font-size: 2rem;
+  }
+}
+
+/* ---------------- Sponsor  Section ---------------- */
+
+.sponsor-section {
+  padding: 0px 150px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2.8rem;
+  margin-bottom: 60px;
+  color: #0a415c;
+}
+
+h2 i {
+  margin-right: 10px;
+  color: #2bb884;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin: 50px 0 40px;
+  display: inline-block;
+  color: #0a415c;
+}
+
+.section-title i {
+  margin-right: 10px;
+  color: #2bb884;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 120px; /* increased gap */
+  justify-items: center;
+  margin-bottom: 60px;
+}
+
+.cards-grid.event-kind {
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  justify-content: center;
+}
+
+.card {
+  background: linear-gradient(145deg, #0a415c, #2bb884);
+  color: #fff;
+  padding: 60px 40px;
+  border-radius: 30px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.4s, box-shadow 0.4s;
+  text-align: left;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.card-header i {
+  font-size: 2rem;
+  margin-right: 15px;
+  color: #fff;
+}
+
+.card h4 {
+  font-size: 1.9rem;
+  margin: 0;
+  font-weight: 700;
+  color: #fff;
+}
+
+.price {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 30px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 35px;
+}
+
+.card li {
+  margin-bottom: 16px;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+}
+
+.card li i {
+  margin-right: 12px;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.card button {
+  background: #0a415c;
+  color: #fff;
+  border: none;
+  padding: 18px 28px;
+  border-radius: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  display: block;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.card button:hover {
+  background: #2bb884;
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sponsor-contact-section {
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 25px;
+  margin: 40px auto;
+  max-width: 1100px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.sponsor-contact-section h2 {
+  font-size: 3rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.sponsor-contact-section p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.contact-btn {
+  display: inline-block;
+  background: #ffffff;
+  color: #0a415c;
+  padding: 18px 40px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.contact-btn:hover {
+  background: #2bb884;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(43, 184, 132, 0.4);
+}
