@@ -1,0 +1,143 @@
+/* ---------------- Main Content ---------------- */
+main {
+  padding: 20px;
+}
+
+/* ---------------- Participation Section ---------------- */
+.participation-section {
+  padding: 50px 100px;
+  background-color: #f9f9f9; /* optional, can be changed */
+  text-align: left;
+  color: #0a4360;
+}
+
+.participation-section .section-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.participation-section .container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.participation-section .section-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #0a4360cc;
+}
+
+.participation-section .sdgs-image {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.participation-section .sdgs-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.participation-section .sdgs-image img:hover {
+  transform: scale(1.03);
+}
+
+/* ---------------- Responsive ---------------- */
+@media screen and (max-width: 768px) {
+  .participation-section {
+    padding: 40px 15px;
+  }
+
+  .participation-section .section-heading {
+    font-size: 1.75rem;
+  }
+
+  .participation-section .section-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* ---------------- Responsive Tweaks ---------------- */
+@media screen and (max-width: 768px) {
+  /* Example: stack content vertically for smaller screens */
+  .about-innovation .container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .about-innovation {
+    padding: 40px 15px;
+  }
+  .about-innovation .content,
+  .about-innovation .image {
+    flex: 1 1 100%;
+    order: 0;
+  }
+  .about-innovation .presentation-link {
+    font-size: 1.6rem;
+  }
+
+  /* Header responsive */
+  .header-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .main-nav {
+    width: 100%;
+    display: none;
+  }
+  .main-nav.nav-open {
+    display: block;
+  }
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  nav ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #0a415c;
+  }
+
+  /* Footer responsive */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-logo,
+  .footer-column {
+    width: 90%;
+    max-width: none;
+    margin: 0 0 30px 0;
+    text-align: center;
+  }
+  .footer-logo p,
+  .footer-column {
+    text-align: center;
+  }
+  .contact-info p,
+  .social-icons {
+    justify-content: center;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+  }
+  .footer-bottom p {
+    margin-bottom: 10px;
+  }
+  .footer-bottom p:last-child {
+    margin-bottom: 0;
+  }
+}

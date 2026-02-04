@@ -1,0 +1,50 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#2bb884" stroke-width="0.5" stroke-opacity="0.2"/>
+    </pattern>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+    </filter>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="#00202c"/>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+  
+  <!-- Network Nodes -->
+  <circle cx="100" cy="100" r="3" fill="#2bb884" opacity="0.7"/>
+  <circle cx="300" cy="150" r="3" fill="#2bb884" opacity="0.7"/>
+  <circle cx="500" cy="100" r="3" fill="#2bb884" opacity="0.7"/>
+  <circle cx="700" cy="150" r="3" fill="#2bb884" opacity="0.7"/>
+  <circle cx="200" cy="250" r="3" fill="#2bb884" opacity="0.7"/>
+  <circle cx="400" cy="300" r="3" fill="#2bb884" opacity="0.7"/>
+  <circle cx="600" cy="250" r="3" fill="#2bb884" opacity="0.7"/>
+  <circle cx="100" cy="400" r="3" fill="#2bb884" opacity="0.7"/>
+  <circle cx="300" cy="450" r="3" fill="#2bb884" opacity="0.7"/>
+  <circle cx="500" cy="400" r="3" fill="#2bb884" opacity="0.7"/>
+  <circle cx="700" cy="450" r="3" fill="#2bb884" opacity="0.7"/>
+  <circle cx="200" cy="550" r="3" fill="#2bb884" opacity="0.7"/>
+  <circle cx="400" cy="500" r="3" fill="#2bb884" opacity="0.7"/>
+  <circle cx="600" cy="550" r="3" fill="#2bb884" opacity="0.7"/>
+  
+  <!-- Network Lines -->
+  <line x1="100" y1="100" x2="300" y2="150" stroke="#2bb884" stroke-width="0.5" opacity="0.3"/>
+  <line x1="300" y1="150" x2="500" y2="100" stroke="#2bb884" stroke-width="0.5" opacity="0.3"/>
+  <line x1="500" y1="100" x2="700" y2="150" stroke="#2bb884" stroke-width="0.5" opacity="0.3"/>
+  <line x1="100" y1="100" x2="200" y2="250" stroke="#2bb884" stroke-width="0.5" opacity="0.3"/>
+  <line x1="300" y1="150" x2="400" y2="300" stroke="#2bb884" stroke-width="0.5" opacity="0.3"/>
+  <line x1="500" y1="100" x2="600" y2="250" stroke="#2bb884" stroke-width="0.5" opacity="0.3"/>
+  <line x1="200" y1="250" x2="400" y2="300" stroke="#2bb884" stroke-width="0.5" opacity="0.3"/>
+  <line x1="400" y1="300" x2="600" y2="250" stroke="#2bb884" stroke-width="0.5" opacity="0.3"/>
+  <line x1="100" y1="400" x2="300" y2="450" stroke="#2bb884" stroke-width="0.5" opacity="0.3"/>
+  <line x1="300" y1="450" x2="500" y2="400" stroke="#2bb884" stroke-width="0.5" opacity="0.3"/>
+  <line x1="500" y1="400" x2="700" y2="450" stroke="#2bb884" stroke-width="0.5" opacity="0.3"/>
+  <line x1="100" y1="400" x2="200" y2="550" stroke="#2bb884" stroke-width="0.5" opacity="0.3"/>
+  <line x1="300" y1="450" x2="400" y2="500" stroke="#2bb884" stroke-width="0.5" opacity="0.3"/>
+  <line x1="500" y1="400" x2="600" y2="550" stroke="#2bb884" stroke-width="0.5" opacity="0.3"/>
+  <line x1="200" y1="550" x2="400" y2="500" stroke="#2bb884" stroke-width="0.5" opacity="0.3"/>
+  <line x1="400" y1="500" x2="600" y2="550" stroke="#2bb884" stroke-width="0.5" opacity="0.3"/>
+  <line x1="200" y1="250" x2="100" y2="400" stroke="#2bb884" stroke-width="0.5" opacity="0.3"/>
+  <line x1="400" y1="300" x2="300" y2="450" stroke="#2bb884" stroke-width="0.5" opacity="0.3"/>
+  <line x1="600" y1="250" x2="500" y2="400" stroke="#2bb884" stroke-width="0.5" opacity="0.3"/>
+</svg>

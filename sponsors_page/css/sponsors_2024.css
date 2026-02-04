@@ -1,0 +1,231 @@
+/* ---------------- Sponsorship  Section ---------------- */
+/* ================= GLOBAL FIX ================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* ================= MAIN CONTAINER ================= */
+section {
+  width: 100%;
+  background: linear-gradient(to bottom, #0a4360, #2bb884);
+}
+
+.sponsor-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #0a4360, #2bb884);
+}
+
+/* ================= SECTION TITLE ================= */
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  color:#ffff;
+}
+
+/* ================= ROW (30% + 70%) ================= */
+.sponsor-row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+/* ================= 30% CARD ================= */
+.sponsor-card-small {
+  flex: 0 0 30%;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsor-card-small img {
+  max-width: 100%;
+  height: auto;
+  max-height: 120px;
+  object-fit: contain;
+}
+
+.sponsor-card-small p {
+  margin-top: 15px;
+}
+
+/* ================= 70% CARD ================= */
+.sponsor-card-large {
+  flex: 0 0 70%;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 20px;
+
+  /* IMPORTANT: prevents height stretching */
+  align-self: flex-start;
+}
+
+/* ================= SILVER (2 LOGOS) ================= */
+.logo-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.logo-grid-2 div {
+  text-align: center;
+}
+
+.logo-grid-2 img {
+  width: 100%;
+  max-height: 90px;
+  object-fit: contain;
+}
+
+/* ================= ASSOCIATE (3 LOGOS PER ROW) ================= */
+.logo-grid-9 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.logo-grid-9 div {
+  text-align: center;
+}
+
+.logo-grid-9 img {
+  width: 100%;
+  max-height: 80px;   /* KEY FIX for big height issue */
+  object-fit: contain;
+}
+
+/* ================= TEXT ================= */
+.sponsor-card-large p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .sponsor-row {
+    flex-direction: column;
+  }
+
+  .sponsor-card-small,
+  .sponsor-card-large {
+    flex: 1 1 100%;
+  }
+
+  .logo-grid-9 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* PARTNERS & PATRONS SECTION */
+.partners-section {
+  padding: 60px 20px;
+  font-family: "Montserrat", sans-serif;
+  background: #fff; /* white background */
+  color: #0a415c;
+  text-align: center;
+}
+
+.partners-section h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #0a415c;
+}
+
+.partners-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.partners-grid img {
+  width: 250px; /* bigger images */
+  height: 200px;
+  border-radius: 20px;
+  padding: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.partners-grid img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(43, 184, 132, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .partners-grid img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .partners-grid img {
+    width: 120px;
+  }
+}
+
+/* COLLABORATOR SECTION */
+.collaborator-section {
+  padding: 60px 20px;
+  font-family: "Montserrat", sans-serif;
+  background: #fff;
+  color: #0a415c;
+  text-align: center;
+}
+
+.collaborator-section h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #0a415c;
+}
+
+.collaborator-section img {
+  max-width: 300px;
+  width: 80%;
+  height: auto;
+  border-radius: 25px;
+  border: 2px solid #0a415c;
+  padding: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.collaborator-section img:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(43, 184, 132, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .partners-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+  .collaborator-section img {
+    width: 70%;
+  }
+}
+
+@media (max-width: 576px) {
+  .partners-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 15px;
+  }
+  .collaborator-section img {
+    width: 90%;
+  }
+}

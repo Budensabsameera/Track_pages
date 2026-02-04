@@ -1,0 +1,369 @@
+/* ================== CSS VARIABLES ================== */
+:root {
+  --primary: #2bb884;
+  --secondary: #0a415c;
+  --light-bg: #f9fafb;
+  --text-dark: #0a415c;
+  --text-muted: #3a5b63;
+  --white: #ffffff;
+}
+*{
+  font-family: "Montserrat";
+}
+/* ================== PROSPECTUS SECTION ================== */
+/* ===== Prospectus Section ===== */
+.prospectus-section {
+
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.prospectus-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;}
+
+.prospectus-image {
+  margin-top: -40px;
+  width: 200%;
+  max-width: 1000px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 25px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  transform: scale(0.5);
+  animation: scaleUp 1s ease forwards;
+}
+/* Background div for button */
+.prospectus-btn-div {
+  width: 90vw;             /* wider than the viewport */
+  max-width: none;          /* remove max-width limit */
+  height: 100px;            /* reduced height */
+  background: url("https://www.theladders.com/wp-content/uploads/handshake_190617.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin: 0 -10vw;          /* adjust so it centers even when wider than viewport */
+  overflow: hidden;         /* prevents image overflow */
+}
+
+
+/* Prospectus button */
+.prospectus-btn {
+  padding: 10px 10px;      /* slightly smaller padding */
+  border-radius: 10px;     /* slightly more rounded */
+  border: none;
+  background: #2bb884;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.4s;
+  text-decoration: none;
+}
+
+.prospectus-btn:hover {
+  background: #0a415c;      /* darker blue on hover */
+  transform: scale(1.05);   /* smooth scale up */
+}
+
+
+/* ===== Animations ===== */
+@keyframes scaleUp {
+  to {
+    transform: scale(1);
+  }
+}
+
+/* ================== BENEFITS SECTION ================== */
+
+.sponsor-benefits {
+  position: relative;
+  padding: 80px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.sponsor-bg {
+  position: absolute;
+  inset: 0;
+  background: url('../images/image.png') center top / 100% auto no-repeat;
+  filter: blur(1px);
+  opacity: 0.2;
+  transform: scale(1.05);
+  z-index: 0;
+}
+
+.sponsor-benefits > .container {
+  position: relative;
+  z-index: 1;
+}
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.benefits-title {
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+    color: #0a415c;
+
+}
+
+/* Grid: 2 per row */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Benefit card */
+.benefit-card {
+  background: #fff;
+  padding: 30px 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 0; 
+  cursor: pointer;
+
+
+ transition: 
+    transform 0.4s ease,
+    background 0.4s ease,
+    color 0.4s ease;}
+
+/* Hover effect: scale down + color change */
+.benefit-card:hover {
+  background: linear-gradient(to bottom, #0a4360, #2bb884);
+  color: #fff;
+  transform: scale(0.93); 
+}
+.scroll-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+/* When visible on scroll */
+.scroll-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scroll animations: combine translateX and fade */
+.animate-left {
+  transform: translateX(-50px) scale(1);
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.animate-right {
+  transform: translateX(50px) scale(1);
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.scroll-animate.in-view.animate-left,
+.scroll-animate.in-view.animate-right {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+}
+
+/* Card content */
+.benefit-card i {
+  font-size: 2rem;
+  color: #2bb884;
+  margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+  font-size: 1.3rem;
+  color: inherit;
+  margin-bottom: 10px;
+}
+
+.benefit-card p {
+  font-size: 0.95rem;
+  color: inherit;
+}
+
+/* Full width card */
+.lastcard.full-width {
+  grid-column: 1 / -1;
+}
+
+/* ================== SPONSOR SECTION ================== */
+.sponsor-section {
+  position: relative;
+  padding: 100px 150px;
+  text-align: center;
+  background: url('../images/image.png') center top / cover no-repeat;
+  font-family: "Montserrat";
+}
+.sponsor-section h2,h3{
+color:var(--secondary);
+ font-size: 2.5rem;
+}
+.sponsor-section h3{
+   font-size: 1.5rem;
+
+}
+
+/* ================== GENERAL PLANS GRID ================== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  grid-auto-rows: 1fr; 
+  margin-bottom: 80px;
+}
+.tick-list {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;      
+}
+
+.tick-list li {
+  display: flex;        
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+.tick-list li i {
+  color: #fefffe;
+  margin-top: 4px;     
+}
+
+/* ================== EVENT IN-KIND (2 CARDS ROW) ================== */
+.event-kind {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 420px));
+  justify-content: center;
+  gap: 50px;
+  margin-top: 40px;
+  grid-auto-rows: 1fr;
+}
+
+/* ================== CARD ================== */
+.card {
+  background: linear-gradient(145deg, var(--secondary), var(--primary));
+  color: var(--white);
+  padding: 70px 10px;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.3);
+}
+
+
+.card:hover {
+ transform: scale(0.95);
+}
+
+/* ================== TYPOGRAPHY ================== */
+.card h4 {
+  font-size: 1.7rem;
+
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 25px 0;
+    color:#FAFA33
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+   flex-grow: 1;
+}
+
+.card li {
+  margin-bottom: 14px;
+}
+
+.card button {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid white;
+  border-radius: 18px;
+  background: var(--secondary);
+  color: var(--white);
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background: var(--primary);
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 1100px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .event-kind {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .sponsor-section {
+    padding: 80px 40px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ================== SPONSOR CONTACT SECTION ================== */
+
+.sponsor-contact-section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* Hurry up heading */
+.contact-title {
+  text-align: center;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+/* Supporting text */
+.contact-text {
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+ .one {
+    font-size: 1.2rem;   
+
+}
+
+/* Email link (NOT a button) */
+.contact-mail {
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e6bff;       
+  text-decoration: none;
+}
+
+.contact-mail:hover {
+  text-decoration: underline;
+}
